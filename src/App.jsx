@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 import Shop from './Pages/Shop'
 import ShopCategory from './Pages/ShopCategory'
 import Product from './Pages/Product'
 import Cart from './Pages/Cart'
+import LoginSignUp from './Pages/LoginSignUp'
 
 function App () {
   return (
@@ -19,6 +20,7 @@ function App () {
           <Route path=':productId' element={<Product />} />
         </Route>
         <Route path='/cart' element={<Cart />}></Route>
+        <Route path='/login' element={<LoginSignUp/>}></Route>
       </Routes>
     </BrowserRouter>
   )
