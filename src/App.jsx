@@ -1,30 +1,26 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
+import Navbar from './components/Navbar'
+import Shop from './Pages/Shop'
+import ShopCategory from './Pages/ShopCategory'
 import Product from './Pages/Product'
-import ProductDetail from './Pages/ProductDetail'
-import Home from './Pages/Home'
-import Haider from './components/Haider'
-import Login from './Pages/Login'
-import Signup from './Pages/SignUp'
-import { AuthProvider } from './Contexts/AuthContext'
-import Dashboard from './Pages/Dashboard'
+import Cart from './Pages/Cart'
 
-function App() {
-
+function App () {
   return (
-    <AuthProvider>
-      <BrowserRouter>
-        <Haider />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path='/product' element={<Product />} />
-          <Route path='/detail/:id' element={<ProductDetail />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
-        </Routes>
-      </BrowserRouter>
-    </AuthProvider>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Shop />}></Route>
+        <Route path='/mens' element={<ShopCategory />} category='mens' />
+        <Route path='/womens' element={<ShopCategory />} category='womens' />
+        <Route path='/kids' element={<ShopCategory />} category='kids' />
+        <Route path='/product' element={<Product />}>
+          <Route path=':productId' element={<Product />} />
+        </Route>
+        <Route path='/cart' element={<Cart />}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
