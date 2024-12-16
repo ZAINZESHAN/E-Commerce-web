@@ -1,0 +1,55 @@
+/* New Collection CSS */
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 150px;
+    gap: 10px;
+    height: 90vh;
+}
+
+.new-collections h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.new-collections hr {
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #252525; /* Set background color */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items by default */
+    margin-top: 50px;
+    gap: 30px;
+}
+
+/* Responsive Styles for New Collection */
+@media (max-width: 1500px) {
+    .collections {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .new-collections {
+        padding: 0px 70px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .collections {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .new-collections {
+        padding: 0px 50px;
+    }
+}
+
+@media (max-width: 750px) {
+    .collections {
+        grid-template-columns: 1fr;
+    }
+}
