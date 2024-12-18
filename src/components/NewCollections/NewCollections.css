@@ -6,6 +6,7 @@
     padding: 0px 150px;
     gap: 10px;
     height: 90vh;
+    /* margin-bottom: 100px; */
 }
 
 .new-collections h1 {
@@ -23,14 +24,16 @@
 }
 
 .collections {
+    padding: 0px 150px;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 items by default */
     margin-top: 50px;
+    margin-bottom: 150px;
     gap: 30px;
 }
 
 /* Responsive Styles for New Collection */
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
     .collections {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -52,4 +55,34 @@
     .collections {
         grid-template-columns: 1fr;
     }
-}
+} */
+
+@media (max-width: 1600px) {
+    .collections {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .collections {
+        padding: 0px 70px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .collections {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .collections {
+        padding: 0px 50px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .collections {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .collections {
+        grid-template-columns: 1fr;
+    }
+  }
