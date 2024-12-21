@@ -1,13 +1,20 @@
-import React, { useContext } from 'react'
-import logo from '../../assets/logo.png'
-// import cart_icon from '../../assets/cart_icon.png'
-import cart_icon from '../../assets/cart_icon.png'
-import { Link, NavLink } from 'react-router-dom'
-import './Navbar.css'
-import { ShopContext } from '../../Contexts/ShopContext'
+import React, { useContext, useRef } from 'react';
+import logo from '../../assets/logo.png';
+import cart_icon from '../../assets/cart_icon.png';
+import { Link, NavLink } from 'react-router-dom';
+import './Navbar.css';
+import { ShopContext } from '../../Contexts/ShopContext';
+import { IoIosArrowForward } from "react-icons/io";
 
 const Navbar = ({ authType }) => {
   const { getTotalCartItems, isLoggedIn, logout } = useContext(ShopContext);
+  const menuRef = useRef();
+  const dropdownRef = useRef();
+
+  const handleDropDown = () => {
+    menuRef.current.classList.toggle('nav-menu-visible');
+    dropdownRef.current.classList.toggle('open'); // Toggle the rotation class
+  };
 
   return (
     <div className='navbar'>
@@ -15,7 +22,14 @@ const Navbar = ({ authType }) => {
         <img src={logo} alt='' />
         <p>SHOPPER</p>
       </div>
-      <div className='nav-menu'>
+      <button
+        onClick={handleDropDown}
+        className="nav-dropdown"
+        ref={dropdownRef}
+      >
+        <IoIosArrowForward />
+      </button>
+      <div ref={menuRef} className='nav-menu'>
         {/* Navigation Links */}
         <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : 'non-active')}>Shop</NavLink>
         <NavLink to='/mens' className={({ isActive }) => (isActive ? 'active' : 'non-active')}>Men</NavLink>
@@ -25,12 +39,12 @@ const Navbar = ({ authType }) => {
 
       <div className='nav-login-cart'>
         {isLoggedIn ? (
-          <button onClick={logout}>Logout</button> // Change button to Logout
-        ) :
+          <button onClick={logout}>Logout</button>
+        ) : (
           <Link to={'/login'}>
-            <button>{authType}</button> {/* Button text should now reflect authType */}
+            <button>{authType}</button>
           </Link>
-          }
+        )}
         <Link to={'/cart'}>
           <img src={cart_icon} alt='' />
         </Link>
@@ -40,5 +54,4 @@ const Navbar = ({ authType }) => {
   );
 };
 
-
-export default Navbar
+export default Navbar;
