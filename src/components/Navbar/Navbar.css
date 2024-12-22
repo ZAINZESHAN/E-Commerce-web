@@ -95,6 +95,26 @@
 }
 
 /* Responsive Styles */
+
+@media screen and (max-width: 1536px) {
+  .navbar {
+    padding: 12px 70px; /* Reduced padding for smaller screens */
+  }
+  .nav-logo img {
+    width: 45px;
+  }
+  .nav-logo p {
+    font-size: 27px;
+  }
+  .nav-menu {
+    gap: 30px;
+    font-size: 19px;
+  }
+  .nav-login-cart {
+    gap: 30px;
+  }
+}
+
 @media screen and (max-width: 1350px) {
   .navbar {
     padding: 12px 50px; /* Reduced padding for smaller screens */
@@ -125,7 +145,7 @@
 
 @media screen and (max-width: 1050px) {
   .navbar {
-    padding: 12px 30px;
+    padding: 12px 40px;
   }
   .nav-menu {
     gap: 25px;

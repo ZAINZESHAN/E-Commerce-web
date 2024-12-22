@@ -1,88 +1,92 @@
 /* New Collection CSS */
 .new-collections {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 150px;
-    gap: 10px;
-    height: 90vh;
-    /* margin-bottom: 100px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 0px 150px; */
+  gap: 10px;
+  margin-bottom: 100px;
 }
 
 .new-collections h1 {
-    color: #171717;
-    font-size: 50px;
-    font-weight: 600;
+  color: #171717;
+  font-size: 50px;
+  font-weight: 600;
 }
 
 .new-collections hr {
-    width: 200px;
-    height: 60px;
-    border-radius: 10px;
-    background-color: #252525; /* Set background color */
-    margin: 20px 0; /* Add margin for spacing */
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #252525; /* Set background color */
+  margin: 20px 0; /* Add margin for spacing */
 }
 
 .collections {
-    padding: 0px 150px;
+  /* padding: 0px 150px; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items by default */
+  margin-top: 50px;
+  gap: 30px;
+}
+@media (max-width: 1350px) {
+  .new-collections {
+    height: 70vh;
+  }
+  .new-collections h1 {
+    font-size: 40px;
+  }
+  .new-collections hr {
+    width: 160px;
+    height: 4px;
+  }
+  .collections {
+    gap: 10px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .new-collections {
+    height: auto;
+  }
+  .new-collections h1 {
+    font-size: 30px;
+  }
+  .new-collections hr {
+    width: 120px;
+    height: 3px;
+  }
+  .collections {
+    gap: 10px;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .new-collections {
+    height: auto;
+    gap: 6px;
+  }
+  .new-collections h1 {
+    font-size: 20px;
+  }
+  .new-collections hr {
+    width: 100px;
+  }
+  .collections {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .new-collections {
+    height: auto;
+  }
+  .collections {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 items by default */
-    margin-top: 50px;
-    margin-bottom: 150px;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
 }
-
-/* Responsive Styles for New Collection */
-/* @media (max-width: 1500px) {
-    .collections {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .new-collections {
-        padding: 0px 70px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .collections {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .new-collections {
-        padding: 0px 50px;
-    }
-}
-
-@media (max-width: 750px) {
-    .collections {
-        grid-template-columns: 1fr;
-    }
-} */
-
-@media (max-width: 1600px) {
-    .collections {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .collections {
-        padding: 0px 70px;
-    }
-  }
-  
-  @media (max-width: 1200px) {
-    .collections {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .collections {
-        padding: 0px 50px;
-    }
-  }
-  
-  @media (max-width: 900px) {
-    .collections {
-        grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 750px) {
-    .collections {
-        grid-template-columns: 1fr;
-    }
-  }

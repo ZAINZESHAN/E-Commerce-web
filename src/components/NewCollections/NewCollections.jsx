@@ -1,11 +1,12 @@
 import React from 'react';
-import './NewCollections.css';
+// import './NewCollections.css';
+import './NewCollections.css'
 import new_collection from '../../assets/new_collections';
 import Item from '../Item/Item';
 
 const NewCollections = () => {
   return (
-    <div className='popular'>
+    <div className='new-collections'>
       <h1>NEW COLLECTIONS</h1>
       <hr />
   <div className='collections'>
