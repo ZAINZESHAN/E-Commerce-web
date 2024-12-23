@@ -31,11 +31,11 @@
 
 @media (max-width: 1700px) {
   .item {
-    width: 330px;
+    width: 340px;
     font-size: 16px;
   }
   .item img {
-    width: 320px;
+    width: 330px;
   }
   .item-price-old {
     font-size: 16px;
@@ -61,7 +61,7 @@
     font-size: 14px;
   }
   .item img {
-    width: 250px;
+    width: 260px;
   }
   .item-price-old {
     font-size: 14px;

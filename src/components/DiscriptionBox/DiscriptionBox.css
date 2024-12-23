@@ -1,5 +1,5 @@
 .discriptionbox{
-    padding: 120px 150px;
+    margin: 120px 150px;
 }
 
 .discriptionbox-navigator{
@@ -29,4 +29,18 @@
     border: 1px solid #d0d0d0;
     padding: 48px;
     padding-bottom: 70px;
+}
+
+@media(max-width:1280px){
+    .discriptionbox{
+        margin: 60px;
+    }
+}
+@media(max-width:800px){
+    .discriptionbox{
+        margin: 60px 20px;
+    }
+    .discriptionbox-description{
+        font-size: 14px;
+    }
 }

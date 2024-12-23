@@ -83,7 +83,7 @@
   justify-content: center;
   align-items: center;
   margin-top: -23px;
-  margin-left: -58px;
+  margin-left: -55px;
   border-radius: 11px;
   font-size: 14px;
   background-color: red;
@@ -112,6 +112,9 @@
   }
   .nav-login-cart {
     gap: 30px;
+  }
+  .nav-cart-count{
+    margin-left: -40px;
   }
 }
 
